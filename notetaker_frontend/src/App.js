@@ -362,8 +362,10 @@ function App() {
             flexDirection: "column",
             marginLeft: isMobile && showSidebar ? "260px" : 0,
             minHeight: "calc(100vh - 52px)",
-            background: "#fff",
-            zIndex: 1
+            background: "#87cbd9",
+            zIndex: 1,
+            color: "#b1e88c",
+            textAlign: "left",
           }}
         >
           <form
@@ -414,7 +416,7 @@ function App() {
                 border: `1px solid ${palette.secondary}33`,
                 borderRadius: 6,
                 padding: 14,
-                fontSize: "1.125rem",
+                fontSize: "1.1875rem",
                 resize: "vertical",
                 color: "#e77913",
                 background: "#f8fafd",
@@ -423,7 +425,7 @@ function App() {
                 transition: "border 0.2s",
                 outline: "none",
                 fontFamily: "Georgia, serif",
-                fontWeight: "bold",
+                fontWeight: "normal",
                 textAlign: "left",
               }}
             />

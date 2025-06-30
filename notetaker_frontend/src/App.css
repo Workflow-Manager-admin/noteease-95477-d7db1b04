@@ -151,7 +151,16 @@ body, html, #root, .notetaker-app {
   margin: 26px auto 0;
   width: 100%;
   max-width: 700px;
+  box-sizing: border-box;
+  overflow: hidden;
 }
+
+@media (max-width: 990px) {
+  .note-editor {
+    max-width: 98vw;
+  }
+}
+
 .title-input {
   font-size: 1.4em;
   font-weight: 600;
@@ -163,10 +172,16 @@ body, html, #root, .notetaker-app {
   color: var(--text-primary);
   margin-bottom: 15px;
   transition: border 0.17s;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  overflow-wrap: break-word;
 }
+
 .title-input:focus {
   border-bottom: 2.7px solid var(--palette-accent);
 }
+
 .textarea {
   font-size: 1.07em;
   border: 1px solid #ececec;
@@ -175,15 +190,25 @@ body, html, #root, .notetaker-app {
   margin-bottom: 20px;
   min-height: 160px;
   width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   outline: none;
   background: #f8fafd;
   color: var(--text-primary);
   transition: border 0.15s;
   font-family: inherit;
+  overflow-y: auto;
+  resize: vertical;
+  word-break: break-word;
+  white-space: pre-wrap;
+  /* Prevent expanding out of parent */
+  display: block;
 }
+
 .textarea:focus {
   border: 1.5px solid var(--palette-primary);
 }
+
 .note-footer {
   text-align: right;
 }
