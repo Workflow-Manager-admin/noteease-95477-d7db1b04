@@ -74,6 +74,7 @@ function App() {
     setEditorTitle("");
     setEditorValue("");
     setIsNew(true);
+    setSearch(""); // Clear search so new note is always visible in the note list
     if (isMobile) setShowSidebar(false);
   }
 
@@ -95,6 +96,7 @@ function App() {
       setNotes([newNote, ...notes]);
       setSelectedId(newNote.id);
       setIsNew(false);
+      setSearch(""); // Clear search to ensure immediate visibility of new note
     } else {
       // Update existing
       setNotes((prevNotes) =>
@@ -412,15 +414,17 @@ function App() {
                 border: `1px solid ${palette.secondary}33`,
                 borderRadius: 6,
                 padding: 14,
-                fontSize: 17,
+                fontSize: "1.125rem",
                 resize: "vertical",
-                color: "var(--text-primary)",
+                color: "#e77913",
                 background: "#f8fafd",
                 minHeight: 180,
                 marginBottom: 18,
                 transition: "border 0.2s",
                 outline: "none",
-                fontFamily: "inherit",
+                fontFamily: "Georgia, serif",
+                fontWeight: "bold",
+                textAlign: "left",
               }}
             />
             <div
